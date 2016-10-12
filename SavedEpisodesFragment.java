@@ -121,6 +121,7 @@ public class SavedEpisodesFragment extends WburBaseMvpFragment<SavedEpisodesCont
         return new SavedEpisodesLoader(getActivity());
     }
 
+    //load all episodes
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
         List<Episode> episodes = ((DBEpisodesLoader) loader).getEpisodes();
@@ -140,13 +141,15 @@ public class SavedEpisodesFragment extends WburBaseMvpFragment<SavedEpisodesCont
     @Override
     public void onSwipeAnimated(int endSize) {
     }
-
+    
+    //swipe to delete the episode
     @Override
     public void onSwipeDelete(Episode item) {
         presenter.swipeToDelete(item);
         updatedEpisodeListView();
     }
-
+    
+    //show undo snackbar after user delete episode
     @Override
     public void onCollapseAnimEnded(Episode item) {
         presenter.deleteEpisodeFromList(item);

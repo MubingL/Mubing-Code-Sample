@@ -10,6 +10,7 @@ import com.intrepid.wbur.models.Episode;
 
 import java.util.List;
 
+//interfaces for presenter and view
 public class SavedEpisodesContract {
     public interface View extends BaseView {
         void refreshEpisodeView(int position);
