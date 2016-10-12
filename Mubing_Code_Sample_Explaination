@@ -1,0 +1,9 @@
+Saved Episode Screen MVP Description:
+
+These four java files are part of the WBUR Listen Android Application I did during my internship. All these files represent the "Saved Episodes" screen in this Android Application.
+
+For the View of this screen: All the audio episodes that the user has already saved will be shown in a list. In each item of the list, the playing status, episode name and the date that user listened to it are displayed.
+
+For the Functions on this screen, users can click any of the episode items to listen to it again. Users can also remove saved episode from the list by swiping right on the item. After deleting it, users can undo this deletion by clicking the "Undo" button on the snackbar at the bottom of the screen.
+
+For the Structure of the code for this screen, it is using Model View Presenter(MVP) pattern. Model is the data access layer; View is the layer that displays the data and reacts to users action(SavedEpisodesFragment.java); Presenter is the layer that provides view with data from model(SavedEpisodesPresenter.java). SavedEpisodesContract.java contains interfaces for view and presenter to implement. SavedEpisodesPresenterTest.java contains all the Unit Test implemented by Mockito in Android to test whether the logic in presenter is acting in a right way.
